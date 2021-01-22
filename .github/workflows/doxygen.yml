@@ -1,0 +1,15 @@
+name: Doxygen
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  run_doxygen:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: mattnotmitt/doxygen-action@v1.2.1
+    - uses: actions/upload-artifact@v2
+      with:
+        name: bc-plugnscript-doxygen
+        path: ./out/
