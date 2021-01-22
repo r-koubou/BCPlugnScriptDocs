@@ -13,3 +13,4 @@ jobs:
       with:
         name: bc-plugnscript-doxygen
         path: ./out/
+
